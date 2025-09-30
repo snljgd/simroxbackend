@@ -5,12 +5,13 @@ const { sendEmail } = require("../services/emailService");
 
 router.post("/contact", async (req, res) => {
   try {
-    const { name, email, message } = req.body;
+    const { name, email,  phone ,  message } = req.body;
 
     const htmlContent = `
       <h2>New Contact Message</h2>
       <p><b>Name:</b> ${name}</p>
       <p><b>Email:</b> ${email}</p>
+      <p><b>phone:</b> ${phone}</p>
       <p><b>Message:</b> ${message}</p>
     `;
 
